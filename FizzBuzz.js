@@ -1,6 +1,6 @@
 /*
 Escribe un programa que muestre los números del 1 al 100 sustituyendo los múltiplos de 3 por la palabra "fizz", los multiplos de 5
-por la palabre "buzz" y los multiplos de ambos (de 3 y 5) por la palabra "fizzbuzz"
+por la palabre "buzz" y los multiplos de ambos (de 3 y 5) por la palabra "fizzbuzz".
 */
 
 //opcion1
@@ -49,6 +49,33 @@ for (let n = 1; n <= 100; n++) {
   if (n % 3 == 0) output += "Fizz";
   if (n % 5 == 0) output += "Buzz";
   console.log(output || n);
+}
+*/
+
+
+/*
+¿Y si ahora a los multiplos de 7 se les tiene que poner la palabra woff?
+¿Como se haria?
+*/
+/*
+for(let i = 1; i <= 100; i++){
+    if(i % 3 === 0 && i % 7 === 0) {
+        console.log("fizz - woff");
+    } else if(i % 5 === 0 && i % 7 === 0) {
+        console.log("buzz - woff");
+    } else if(i % 3 === 0 && i % 5 === 0){
+        console.log("fizz-buzz");
+    } else {
+        if(i % 3 === 0){
+            console.log("fizz");
+        } else if(i % 5 === 0){
+            console.log("buzz");
+        } else if(i % 7 === 0) {
+            console.log("woff");
+        } else {
+            console.log(i);
+        }
+    }
 }
 */
 
