@@ -3,19 +3,7 @@ Escribe un programa que muestre los números del 1 al 100 sustituyendo los múlt
 por la palabre "buzz" y los multiplos de ambos (de 3 y 5) por la palabra "fizzbuzz"
 */
 
-
-//Opcion 1
-/*
-for (let n = 1; n <= 100; n++) {
-  let output = "";
-  if (n % 3 == 0) output += "Fizz";
-  if (n % 5 == 0) output += "Buzz";
-  console.log(output || n);
-}
-*/
-
-
-//opcion2
+//opcion1
 
 for (let i = 1; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0){
@@ -33,7 +21,7 @@ for (let i = 1; i <= 100; i++) {
 }
 
 
-//opcion 3 con una funcion
+//opcion 2 con una funcion
 /*
 function fizzBuzz() {
   for(let i = 1; i <= 100; i++){
@@ -53,3 +41,14 @@ function fizzBuzz() {
 //Llamamos a la funcion fizzBuzz()
 fizzBuzz();
 */
+
+//Opcion 3
+/*
+for (let n = 1; n <= 100; n++) {
+  let output = "";
+  if (n % 3 == 0) output += "Fizz";
+  if (n % 5 == 0) output += "Buzz";
+  console.log(output || n);
+}
+*/
+
