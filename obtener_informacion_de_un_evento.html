@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .titulo {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      margin: 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .parrafo1 {
+      margin: 15px auto;
+      width: 110px;
+      padding: 20px;
+      border: solid 1px blue;
+    }
+
+    .parrafo1:hover {
+      background-color: black;
+      color: white;
+
+    }
+
+    .parrafo2 {
+      margin: 0 auto;
+      width: 110px;
+      padding: 20px;
+      border: solid 1px blue;
+    }
+
+    .parrafo2:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="eventos" class="titulo">Obtener información de un evento</h1>
+  <h2 id="parrafo1" class="parrafo1">Párrafo 1</h2>
+  <h2 id="parrafo2" class="parrafo2">Párrafo 2</h2>
+
+  <script>
+    const eventos = document.querySelector("#eventos");
+    const parrafo1 = document.querySelector("#parrafo1");
+    const parrafo2 = document.querySelector("#parrafo2");
+
+    eventos.addEventListener("mouseover", manejador);
+    eventos.addEventListener("mouseout", manejador);
+
+    function manejador(event) {
+      switch (event.type) {
+        case "mouseover":
+          this.style.color = "purple";
+          break;
+        case "mouseout":
+          this.style.color = "yellow";
+          break;
+      }
+    };
+
+    parrafo1.addEventListener("click", saludo);
+    parrafo2.addEventListener("click", saludo);
+
+    //Esta funcion mostrara un alert cuando hagamos click sibre le parrafo 1 o el parrafo 2
+    function saludo(event) {
+      //Extraemos el elemento con target
+      if (event.target.id === "parrafo1") {
+        alert("Has pulsado el primer parrafo");
+      } else if (event.target.id === "parrafo2") {
+        alert("Has pulsado el segundo parrafo");
+      };
+
+      alert(`Has pulsado el ${event.target.id}`);
+    };
+
+
+  </script>
+</body>
+
+</html>
