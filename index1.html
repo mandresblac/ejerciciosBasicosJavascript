@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message</title>
+</head>
+<body>
+  <script>
+	// TODO: Add hello code
+	function getMessage(name) {
+	  return 'Hello, ' + name + '...';
+	}
+	const message = getMessage('Andrea');
+	document.write(message);//Para mostrar el mensaje en el navegador
+
+	// TODO: Add setTimeout code
+	/*La función setTimeout llama a otra función después de un período de tiempo especificado, en este caso 2000 milisegundos que es
+	igual a 2 segundos.*/
+	setTimeout(
+	  () => { document.write('...Hello again!')},
+	  2000
+	);
+
+  </script>
+</body>
+</html>
