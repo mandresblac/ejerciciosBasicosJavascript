@@ -14,13 +14,13 @@ La funcion proximoEnLaFila debe retornar el elemento que fue removido.
 
 const proximoEnLaFila = (arreglo, elemento) => {
   arreglo.push(elemento); //Agregamos al final del arreglo
-  return arreglo.shift(); //Remueve el primer elemento
+  return arreglo.shift(); //Remueve y retorna el primer elemento eliminado
 };
 
 
 let miArreglo = [1, 2, 3, 4, 5];
 
-console.log("Antes: " + JSON.stringify(miArreglo));
+console.log("Antes: " + JSON.stringify(miArreglo)); //JSON.stringify sirve para mostrar arreglos en consola
 
 console.log("Durante llamado de la funcion: " + proximoEnLaFila(miArreglo, 6));
 
