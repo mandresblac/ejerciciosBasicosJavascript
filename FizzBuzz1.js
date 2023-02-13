@@ -1,16 +1,35 @@
-// Fizz Buzz...
+/*
+Escribe un programa que muestre los números del 1 al 100 sustituyendo los multiplos de 3 por la palabra "Fizz", los multiplos de 5 por la palabra "Buzz" y los multiplos de ambos (de 3 y 5) por la palabra "FizzBuzz
+*/
 
-// 3 6 9 12 15 ...  FIZZ
-// 5 10 15 20 25 ... BUZZ
-// 15 30 45 ... Fizz Buzz
+// Opción 1
 
+for (let i= 1; i <= 100; i++){
+  if(i % 3 === 0 && i % 5 === 0){
+	console.log(`${i} FizzBuzz`);
+  }else if(i % 3 === 0){
+	console.log(`${i} Fizz`);
+  }else if(i % 5 === 0){
+	console.log(`${i} Buzz`);
+  }else{
+	console.log(i);
+  }
+};
+
+
+
+// Opción 2
+/*
 for (let i = 1; i < 100; i++) {
   if (i % 15 === 0) {
-    console.log(`${i} FIZZ BUZZ`);
+    console.log(`${i} Fizz Buzz`);
   } else if (i % 3 === 0) {
-    console.log(`${i} fizz`);
+    console.log(`${i} Fizz`);
   } else if (i % 5 === 0) {
-    console.log(`${i} buzz`);
+    console.log(`${i} Buzz`);
+  }else{
+  	console.log(i);
   }
-}
+};
+*/
 
