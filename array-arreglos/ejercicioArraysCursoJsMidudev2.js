@@ -1,15 +1,25 @@
 /*
-Crear un afunción que reciba un array de palabras y devuekva "true" si todas las palabras terminan con la letra "a"
-y "false" si al menos una palabra no termina con la letra "a"
- */
+Dada una lista de números, escribe una función en JavaScript que devuelva la suma de todos los números pares en la
+lista. La función deberá iterar sobre cada número en la lista, comprobar si el número es par y, si es así, añadirlo
+a la suma total. Usa el bucle que quieras para solucionarlo.
+*/
 
-function acabaEnA(words) {
-  return words.every(palabras => palabras.endsWith("a"));
+
+function sumarPares(numeros) {
+
+	let suma = 0;
+
+  	numeros.forEach(elemento => {
+		if(elemento % 2 === 0){
+			suma += elemento;
+      		};
+  	});
+
+	return suma;
 };
 
-let palabras1 = ["puerta", "arandela", "camiseta"];
-console.log(acabaEnA(palabras1));
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 
-let palabras2 = ["puerta", "arandela", "camiseta", "ventilador"];
-console.log(acabaEnA(palabras2));
+//Llamada a la función
+console.log(sumarPares(numbers));
 

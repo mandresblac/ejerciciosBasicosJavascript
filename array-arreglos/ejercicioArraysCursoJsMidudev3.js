@@ -1,17 +1,15 @@
 /*
-Recibes una lista de números. Debes ordenar los números de mayor a menor según su valor absoluto. Eso quiere decir que
-los números negativos pierden el signo y se ordenan como si fueran positivos.
-
-Por ejemplo, si recibes [5, -10, -2, -25, -7] deberias devolver [-2, 5, 7, -10, -25].
-
-Puedes usar el metodo Math.abs(num) par obtener el valor absoluto de un número.
+Crear un afunción que reciba un array de palabras y devuekva "true" si todas las palabras terminan con la letra "a"
+y "false" si al menos una palabra no termina con la letra "a"
  */
 
-function sortAbsoluteNumbers(numbers) {
-  return numbers.sort((a, b) => Math.abs(a) - Math.abs(b));
-}
+function acabaEnA(words) {
+  return words.every(palabras => palabras.endsWith("a"));
+};
 
-let numbers = [5, -10, -2, -25, 7]
+let palabras1 = ["puerta", "arandela", "camiseta"];
+console.log(acabaEnA(palabras1));
 
-console.log(sortAbsoluteNumbers(numbers));
+let palabras2 = ["puerta", "arandela", "camiseta", "ventilador"];
+console.log(acabaEnA(palabras2));
 

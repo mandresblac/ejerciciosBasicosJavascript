@@ -1,22 +1,17 @@
 /*
-Recibes dos parametros: Una lista de palabras "words" y una palabra "word". Primero, busca el índice de la palabra en
-la lista. Después, usa ese índice (que séra un número) y devuelve todas las palabras de "words" que sean más largas
-(length) que el número de índice.
+Recibes una lista de números. Debes ordenar los números de mayor a menor según su valor absoluto. Eso quiere decir que
+los números negativos pierden el signo y se ordenan como si fueran positivos.
 
-Ten en cuenta que la palabra "word" siempre existirá en el array, por lo que no es necesario comprobar si existe o no
-*/
+Por ejemplo, si recibes [5, -10, -2, -25, -7] deberias devolver [-2, 5, 7, -10, -25].
 
+Puedes usar el metodo Math.abs(num) par obtener el valor absoluto de un número.
+ */
 
-function buscaPalabras(words, word) {
-  const posicionPalabra = words.indexOf(word);
-  console.log(posicionPalabra);
+function sortAbsoluteNumbers(numbers) {
+  return numbers.sort((a, b) => Math.abs(a) - Math.abs(b));
+}
 
-  const palabrasMasLargasQueElIndice = words
-  	.filter(palabras => palabras.length > posicionPalabra);
+let numbers = [5, -10, -2, -25, 7]
 
-  return palabrasMasLargasQueElIndice;
-};
-
-let words = ["avion", "casa", "puerta", "silla", "mesa", "ventana", "nevera"];
-console.log(buscaPalabras(words, "ventana"));
+console.log(sortAbsoluteNumbers(numbers));
 
