@@ -21,28 +21,19 @@ const matrix = [
 ];
 
 function findJavaScript(matrix) {
-    let posicion = [];
+  for(let i = 0; i < matrix.length; i++){
+	const fila = matrix[i];
 
-    for (let i = 0; i < 3; i++) {
-        //console.log(matrix[i]);
-        if (matrix[0][i] === 'JavaScript' ||
-            matrix[1][i] === 'JavaScript' ||
-            matrix[2][i] === 'JavaScript') {
-            posicion.push(matrix[0][i].indexOf('JavaScript'));
-        }
-    };
+	for(let j = 0; j < fila.length; j++) {
+	  if(fila[j] === 'JavaScript') {
+		return [i, j];
+	  }
+	}
+  }
 
-    for (let i = 0; i < matrix.length; i++) {
-        //console.log(matrix[i]);
-        if (matrix[i][0] === 'JavaScript' ||
-            matrix[i][1] === 'JavaScript' ||
-            matrix[i][2] === 'JavaScript') {
-            posicion.push(matrix[i].indexOf('JavaScript'));
-        }
-    }
-
-    return posicion;
+  return [-1, -1];
 };
 
 const position = findJavaScript(matrix);
 console.log(position); // -> [0, 2]
+
